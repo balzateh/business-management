@@ -12,4 +12,8 @@ development:
   user: acroton
   password: 'qwer1234'
 
-
+production:
+  <<: *default
+  database: businessmanagement
+  username: root
+  password: businessmanagement
