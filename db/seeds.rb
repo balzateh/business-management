@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+sector = Sector.create(:name => "Agricultura")
+Sector.create(:name => "Industria")
+Sector.create(:name => "Comercio")
+
+product = Product.create(:name => "Andamio de carga")
+Product.create(:name => "Andamio multidireccional")
+Product.create(:name => "Andamio colgante")
+

@@ -1,0 +1,21 @@
+<p>
+  <strong>Venta#:</strong>
+  <%= @sale.id %>
+</p>
+<p>
+    <strong>Fecha de Venta:</strong>
+    <%= @sale.created_at.strftime("%Y-%m-%d") %>
+</p>
+<p>
+  <strong>Cliente:</strong>
+  <%= @sale.client_name %>
+</p>
+<p>
+  <strong>Productos:</strong><br>
+  <% @saleproducts.where(sale_id: @sale.id).each do |sale_p| %>
+    <%= sale_p.product_name %>,<br>
+  <% end %>
+</p>
+<p>
+<%= link_to 'Atras', sales_path %>
+</p>

@@ -1,0 +1,28 @@
+<div class="row mb-5">
+    <h1>Nueva Venta</h1>
+</div>
+
+<%= form_for @sale, url: sales_path do |f| %>
+  
+  <p>
+    <select class="form-control" name="sale[client_id]">
+        <option value="">Seleccione un Cliente</option>
+        <% @clients.each do |client| %>
+            <option <%= @sale.client_id == client.id ? 'selected': '' %> value="<%= client.id %>"><%= client.name %></option>
+        <% end %>
+    </select>
+  </p>
+  <p>
+    <% @products.each do |product| %>
+    <div class="form-check">
+        <label class="form-check-label">
+            <input type="checkbox" name="product_ids[]" class="form-check-input" value="<%= product.id %>"><%= product.name %>
+        </label>
+    </div>
+    <% end %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

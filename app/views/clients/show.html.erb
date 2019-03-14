@@ -1,0 +1,22 @@
+<p>
+  <strong>Nombre cliente:</strong>
+  <%= @client.name %>
+</p>
+<p>
+  <strong>Nombre Empresa:</strong>
+  <%= @client.company %>
+</p>
+<p>
+  <strong>Correo electrónico:</strong>
+  <%= @client.email %>
+</p>
+<p>
+  <strong>Teléfono:</strong>
+  <%= @client.phone %>
+</p>
+<p>
+  <strong>Sector Economico:</strong>
+  <%= @client.sector_name %>
+</p>
+
+<a href="<%= edit_client_path(@client) %>" role="button" class="btn btn-primary btn-lg">Editar</a>
